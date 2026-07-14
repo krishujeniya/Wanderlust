@@ -1,80 +1,64 @@
-# 🌍 AI Travel Planner Agent
 
-A beautiful, responsive static landing page for an AI-powered Travel Planner Agent, featuring an integrated IBM watsonx Orchestrate chat widget.
+# 🌍 Wanderlust: AI Travel Planner Agent
 
-**[Live Demo →](#)** *(update with your GitHub Pages URL)*
+A clean, responsive static landing page for an AI-powered Travel Planner, featuring a fully integrated IBM watsonx Orchestrate chat widget. 
+
+**[View Live Demo](https://krishujeniya.github.io/Wanderlust/)**
 
 ---
 
-## 🚀 Quick Start
+## 📖 About the Project
 
-### 1. Clone & Configure
+Wanderlust is a modern front-end interface built to showcase AI agent integration. It combines a sleek, travel-focused design system with smooth scroll animations and a floating AI assistant. 
 
-```bash
-git clone https://github.com/krishujeniya/Travel_Planner_Agent.git
-cd Travel_Planner_Agent
-```
+The project is built entirely with pure HTML, CSS, and Vanilla JavaScript, making it lightweight and lightning-fast. It also uses a custom GitHub Actions workflow to securely inject IBM Watson configurations during deployment, keeping the public repository clean of hardcoded environment data.
 
-### 2. Set Up Credentials
+## ✨ Features
 
-```bash
-cp config.example.js config.js
-```
+* **Modern Travel Aesthetic:** Ocean blues, crisp whites, and glassmorphism UI effects.
+* **Fully Responsive:** Mobile-first design that scales perfectly to tablets and desktop monitors.
+* **Scroll Animations:** Built with Intersection Observer for smooth, lightweight reveal effects.
+* **Dynamic Counters:** Animated statistics in the hero section that count up on scroll.
+* **AI Integration:** Floating chat widget powered by IBM watsonx Orchestrate.
+* **Zero Dependencies:** No heavy frameworks or libraries to slow down the page.
 
-Edit `config.js` with your IBM watsonx Orchestrate credentials. This file is **git-ignored** and will never be pushed.
+---
 
-### 3. Deploy to GitHub Pages
+## 🚀 How to Run Locally
 
-Push all files (except `config.js`) to your repository. For the chat widget to work on GitHub Pages, you'll need to commit `config.js` **or** inline the config — see the Security section below.
+If you want to run this project on your local machine, follow these steps:
+
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/krishujeniya/Wanderlust.git](https://github.com/krishujeniya/Wanderlust.git)
+   cd Wanderlust
+   ```
+
+2. **Add your credentials**
+Open `index.html` and replace the placeholder text in the `<script>` block at the bottom of the file with your actual IBM watsonx Orchestrate IDs.
+3. **Launch the site**
+Open `index.html` in your browser, or use a tool like VS Code Live Server for a better development experience.
 
 ---
 
 ## 📁 Project Structure
 
-```
-Travel_Planner_Agent/
-├── index.html          # Main HTML page
-├── style.css           # Design system & responsive styles
-├── script.js           # Animations, navigation & chat loader
-├── config.js           # 🔒 IBM credentials (git-ignored)
-├── config.example.js   # Template for config.js
-├── .gitignore          # Keeps config.js out of repo
-├── assets/
-│   ├── hero-bg.png     # Hero background image
-│   ├── dest-santorini.png
-│   ├── dest-bali.png
-│   ├── dest-tokyo.png
-│   └── dest-swiss.png
+```text
+Wanderlust/
+├── .github/
+│   └── workflows/
+│       └── static.yml    # Deployment pipeline & secret injection
+├── assets/               # Images and icons
+├── index.html            # Main HTML structure and chat loader
+├── style.css             # Design system and responsive layouts
+├── script.js             # Navigation logic and scroll animations
 └── README.md
+
 ```
-
----
-
-## 🔐 Security Note
-
-Since GitHub Pages serves **static files only**, there's no server-side environment variable support. Two approaches:
-
-| Approach | Pros | Cons |
-|---|---|---|
-| **Commit `config.js`** | Chat works on GitHub Pages | Credentials visible in repo & browser |
-| **Keep `config.js` git-ignored** | Credentials not in git history | Chat won't load on GitHub Pages (only local) |
-
-> **Recommendation**: For production, IBM watsonx Orchestrate credentials are designed to be client-side. The `orchestrationID` and `agentId` are meant to be public-facing. Commit `config.js` if you want the chat to work on GitHub Pages.
-
----
-
-## ✨ Features
-
-- **Modern Travel Aesthetic** — Ocean blues, crisp whites, glassmorphism
-- **Fully Responsive** — Mobile-first, looks great on all devices
-- **Scroll Animations** — Intersection Observer-powered reveal effects
-- **Counter Animation** — Animated statistics in the hero section
-- **IBM watsonx Chat** — AI agent integration via watsonx Orchestrate
-- **SEO Optimized** — Meta tags, semantic HTML, proper heading hierarchy
-- **Zero Dependencies** — Pure HTML, CSS, and Vanilla JavaScript
 
 ---
 
 ## 📄 License
 
-MIT
+This project is licensed under the MIT License.
+
