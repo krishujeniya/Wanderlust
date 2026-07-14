@@ -324,21 +324,19 @@
     <script src="script.js"></script>
 
     <script>
-  window.wxOConfiguration = {
-    orchestrationID: "PLACEHOLDER_ORCH_ID",
-    hostURL: "PLACEHOLDER_HOST_URL",
-    rootElementID: "PLACEHOLDER_ROOT_ID",
-    deploymentPlatform: "PLACEHOLDER_PLATFORM",
-    crn: "PLACEHOLDER_CRN",
-    chatOptions: {
-        agentId: "PLACEHOLDER_AGENT_ID",
-        agentEnvironmentId: "PLACEHOLDER_ENV_ID",
-    },
-    // This part tells the widget to draw itself on the screen
-    onLoad: async (instance) => {
-        await instance.render();
-    }
-  };
+window.wxOConfiguration = {
+        orchestrationID: "PLACEHOLDER_ORCH_ID",
+        hostURL: "PLACEHOLDER_HOST_URL",
+        deploymentPlatform: "PLACEHOLDER_PLATFORM",
+        crn: "PLACEHOLDER_CRN",
+        chatOptions: {
+            agentId: "PLACEHOLDER_AGENT_ID",
+            agentEnvironmentId: "PLACEHOLDER_ENV_ID",
+        },
+        onLoad: async (instance) => {
+            await instance.render();
+        }
+      };
   
   setTimeout(function () {
     const script = document.createElement('script');
