@@ -31,17 +31,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
-      - name: Inject IBM Secrets
-        run: |
-          sed -i "s|PLACEHOLDER_ORCH_ID|${{ secrets.IBM_ORCH_ID }}|g" index.html
-          sed -i "s|PLACEHOLDER_HOST_URL|${{ secrets.IBM_HOST_URL }}|g" index.html
-          sed -i "s|PLACEHOLDER_ROOT_ID|${{ secrets.IBM_ROOT_ID }}|g" index.html
-          sed -i "s|PLACEHOLDER_PLATFORM|${{ secrets.IBM_PLATFORM }}|g" index.html
-          sed -i "s|PLACEHOLDER_CRN|${{ secrets.IBM_CRN }}|g" index.html
-          sed -i "s|PLACEHOLDER_AGENT_ID|${{ secrets.IBM_AGENT_ID }}|g" index.html
-          sed -i "s|PLACEHOLDER_ENV_ID|${{ secrets.IBM_ENV_ID }}|g" index.html
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
