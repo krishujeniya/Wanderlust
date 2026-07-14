@@ -323,28 +323,32 @@
     <!-- Site animations & navigation -->
     <script src="script.js"></script>
 
-    <!-- IBM watsonx Orchestrate AI Agent (floating chat widget) -->
-    <!-- IBM watsonx Orchestrate AI Agent (floating chat widget) -->
-   <script>
+    <script>
   window.wxOConfiguration = {
     orchestrationID: "PLACEHOLDER_ORCH_ID",
-        hostURL: "PLACEHOLDER_HOST_URL",
-        rootElementID: "PLACEHOLDER_ROOT_ID",
-        deploymentPlatform: "PLACEHOLDER_PLATFORM",
-        crn: "PLACEHOLDER_CRN",
-        chatOptions: {
-            agentId: "PLACEHOLDER_AGENT_ID",
-            agentEnvironmentId: "PLACEHOLDER_ENV_ID",
+    hostURL: "PLACEHOLDER_HOST_URL",
+    rootElementID: "PLACEHOLDER_ROOT_ID",
+    deploymentPlatform: "PLACEHOLDER_PLATFORM",
+    crn: "PLACEHOLDER_CRN",
+    chatOptions: {
+        agentId: "PLACEHOLDER_AGENT_ID",
+        agentEnvironmentId: "PLACEHOLDER_ENV_ID",
+    },
+    // This part tells the widget to draw itself on the screen
+    onLoad: async (instance) => {
+        await instance.render();
     }
   };
+  
   setTimeout(function () {
     const script = document.createElement('script');
     script.src = `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
     script.addEventListener('load', function () {
-        wxoLoader.init();
+        // This part passes your settings into the loader
+        wxoLoader.init(window.wxOConfiguration);
     });
     document.head.appendChild(script);
-  }, 0);                     
+  }, 0);
 </script>
 </body>
 </html>
