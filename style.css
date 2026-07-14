@@ -187,6 +187,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   box-shadow: -4px 0 20px rgba(0,0,0,.1);
   transition: right .4s var(--ease-out);
   display: flex;
+  z-index: 1001;
 }
 .nav-links.open {
   right: 0;
@@ -222,6 +223,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: 5px;
   width: 28px;
   padding: 4px 0;
+  z-index: 1002;
+  position: relative;
 }
 .nav-toggle span {
   display: block;
@@ -231,6 +234,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transition: all .3s;
 }
 .navbar.scrolled .nav-toggle span { background: var(--gray-800); }
+.nav-toggle.active span { background: var(--gray-800); }
 .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
 .nav-toggle.active span:nth-child(2) { opacity: 0; }
 .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
@@ -245,6 +249,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: 100px 24px 60px;
 }
 
 .hero-bg {
